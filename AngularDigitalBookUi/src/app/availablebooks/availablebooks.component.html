@@ -1,0 +1,37 @@
+<br><br><br>
+<div class="books-grid">
+    <div class="book-row">
+        <div class="book-row-details">
+           
+            <table class="myTable myTable-zebra myTable-horizontal">
+                <thead>
+                    <th>BookName</th> &nbsp;&nbsp;
+                    <th>Price</th>
+                    <th>Content</th>
+                    <th>Status</th>
+                      <th>Active/Deactive</th>
+                    <th>Content book update</th>
+                </thead>
+                <tbody *ngFor="let book of books">
+                    <tr>
+                        <td>{{ book.bookName }}</td>&nbsp;&nbsp;
+                        <td>{{ book.price }}</td>
+                        <td>{{book.content}}</td>
+                        <td><a *ngIf="book.active == true">Active</a>
+                            <a *ngIf="book.active == false">Inactive</a>
+                          </td>
+                          <td>
+                          <button class="enjoy-css"  (click)="deactivatebook(book.bookId)">Change Availability</button>
+                        </td>
+                        <textarea class="comment" name="paragraph_text" cols="10" rows="2" [(ngModel)]="book.content"></textarea>
+                        <td>
+                            <button class="enjoy-css"  (click)="update(book.bookId,book.content)">Update</button>
+                          </td>
+                          
+                </tbody>
+            
+            </table>
+        </div>
+        
+    </div>
+</div>

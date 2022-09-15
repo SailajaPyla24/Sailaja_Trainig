@@ -1,0 +1,72 @@
+<br><br>
+<div class=" books-container" style="text-align:center;">
+  <div class=" books-form">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="">Book Name</label>
+        &nbsp;
+        <input type="text" name="BookName" placeholder="Enter Book Name" [(ngModel)]='book.bookName' />
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="">Author</label> &nbsp;
+        <input type="text" name="UserName" placeholder="Enter Author" [(ngModel)]='user.userName' />
+      </div> <br>
+      <div class="form-group">
+        <div>
+          <label for="">Publisher</label> &nbsp;
+          <input type="text" name="Publisher" placeholder="Enter Publisher" [(ngModel)]='book.publisher' />
+        </div>
+        <br>
+        <div class="form-group">
+          <div>
+            <label for="">Price</label> &nbsp;
+            <input type="text" name="price" placeholder="Enter Price" [(ngModel)]='book.price' />
+          </div> <br>
+        </div>
+        <div>
+          <label for="">Category</label> &nbsp;
+          <select style="position: relative;width: 100px;" (change)="dropdownselectionchange()"
+            [(ngModel)]="selectedObject" name="demo" id="#">
+            <option selected="selected" value="Fiction">Fiction</option>
+            <option value="Comic">Comic</option>
+            <option value="Fantasy">Fantasy</option>
+          </select>
+        </div>
+      </div> <br>
+      <div>
+        <label for="">Content</label> &nbsp;
+        <input type="text" name="content" placeholder="Enter Content" [(ngModel)]='book.content' />
+      </div> <br>
+      <div>
+        <label for="">Active</label> &nbsp;
+        <input type="text" name="active" [(ngModel)]='book.active' />
+      </div> <br>
+
+      <div class="form-group">
+        <br>
+        <button>Publish</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div>
+  <br>
+  <table class="myTable myTable-zebra myTable-horizontal">
+    <thead>
+      <th>BookName</th> &nbsp;&nbsp;
+      <th>Price</th>&nbsp;&nbsp;
+      <th>Content</th>
+    </thead>
+    <tbody *ngFor="let book of books">
+      <tr>
+        <td>{{ book.bookName }}</td>&nbsp;&nbsp;
+        <td>{{ book.price }}</td>&nbsp;&nbsp;
+        <td>{{book.content}}</td>
+        
+      </tr>
+    </tbody>
+
+  </table>
+</div>

@@ -1,0 +1,49 @@
+<br><br>
+<div class="container" style="text-align:center">
+  <h3>
+    Sign Up Page
+  </h3>
+  <div class="container">
+    <br>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <br>
+      <div class="form-group">
+        <label for="">User Name</label> &nbsp; &nbsp;
+        <input type="text" name="userName" placeholder="Enter User Name" [(ngModel)]="user.userName">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="">EmailId</label> &nbsp; &nbsp;
+        <input type="text" name="EmailId" placeholder="Enter EmailId" [(ngModel)]="user.emailId">
+      </div>
+      <br>
+      <div>
+        <label for="">Password</label> &nbsp; &nbsp;
+        <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="user.password">
+      </div>
+      <br>
+      <div>
+        <label for="">FirstName</label> &nbsp; &nbsp;
+        <input type="text" name="firstName" placeholder="Enter First Name" [(ngModel)]="user.firstName">\
+      </div>
+      <br>
+      <div>
+        <label for="">LastName</label> &nbsp; &nbsp;
+        <input type="text" name="lastName" placeholder="Enter Last Name" [(ngModel)]="user.lastName">
+      </div>
+      <br>
+      <div>
+
+        <label> <input type="radio" value="Author" name="role" ngModel (change)="onAuthorRoleid()"> Author</label>
+        <label> <input type="radio" value="Reader" name="role" ngModel (change)="onUserRoleid()"> Reader</label>
+
+      </div>
+      <br>
+      <div class="form-group">
+        <button (onclick)="onSubmit()">SignUp </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

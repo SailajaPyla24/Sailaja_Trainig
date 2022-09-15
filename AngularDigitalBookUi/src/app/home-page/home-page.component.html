@@ -1,0 +1,68 @@
+<br><br>
+<div class="banner" style="text-align:center">
+  <h3>
+    Search Books
+  </h3>
+  <div class=" books-container">
+    <div class=" books-form">
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="">Book Name</label>&nbsp;
+          <input type="text" name="BookName" placeholder="Enter Title" [(ngModel)]="book.bookName">
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+          <label for="">Author Name</label>&nbsp;
+          <input type="text" name="AuthorName" placeholder="Enter author name" [(ngModel)]="user.userName">
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">Publisher</label>&nbsp;
+          <input type="text" name="Publisher" placeholder="Enter Publisher" [(ngModel)]="book.publisher">
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">Published Date</label>&nbsp;
+          <input type="text" name="PublishedDate" placeholder="Enter Released Date" [(ngModel)]="book.publishedDate">
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">Price</label> &nbsp;
+          <input type="text" name="price" placeholder="Enter price" [(ngModel)]='book.price' />
+        </div>
+        <br>
+        <div class="form-group">
+          <button (onclick)="onSubmit()">Search</button>
+        </div>
+        <div class="books-grid">
+          <div class="book-row">
+            <div class="book-row-details">
+              <table class="myTable myTable-zebra myTable-horizontal">
+                <thead>
+                  <th>Book Name</th>
+                  <th>Price</th>
+                  <th>Publisher</th>
+                  <th>publishedDate</th>
+                  <th>bookId</th>
+                  <th>buy option</th>
+                </thead>
+                <tbody *ngFor="let book of books">
+                  <tr>
+                    <td>{{ book.bookName }}</td>
+                    <td>{{ book.price }}</td>
+                    <td>{{ book.publisher }}</td>
+                    <td>{{ book.publishedDate }}</td>
+                    <td>{{book.bookId}}</td>
+                    <td><a [routerLink]="['/purchase', book.bookId]"> buy </a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

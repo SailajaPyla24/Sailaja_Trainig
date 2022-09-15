@@ -1,0 +1,25 @@
+<br><br>
+<div class="container" style="text-align:center">
+   <h3>
+      Login Page
+   </h3>
+   <div class="container">
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
+         <br>
+         <br>
+         <div class="form-group">
+            <label for="">UserName </label>&nbsp;
+            <input type="text" name="UserName" placeholder="Enter Username" [(ngModel)]="user.userName">
+            <br><br>
+         </div>
+         <div>
+            <label for="">Password</label>&nbsp;&nbsp;
+            <input type="password" name="password" placeholder="Enter password" [(ngModel)]="user.password">
+         </div>
+         <br>
+         <div class="form-group">
+            <button (onclick)="onSubmit()">Login</button>
+         </div>
+      </form>
+   </div>
+</div>
