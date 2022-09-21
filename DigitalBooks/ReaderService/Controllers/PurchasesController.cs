@@ -112,17 +112,45 @@ namespace ReaderService.Controllers
 
         // POST: api/Purchases
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPost]
+        //public async Task<ActionResult<Purchase>> PostPurchase(Purchase purchase)
+        //{
+        //  if (_context.Purchases == null)
+        //  {
+        //      return Problem("Entity set 'DIGITALBOOKSContext.Purchases'  is null.");
+        //  }
+        //    _context.Purchases.Add(purchase);
+        //    await _context.SaveChangesAsync();
+
+        //    return CreatedAtAction("GetPurchase", new { id = purchase.PurchaseId }, purchase);
+        //}
+
         [HttpPost]
         public async Task<ActionResult<Purchase>> PostPurchase(Purchase purchase)
         {
-          if (_context.Purchases == null)
-          {
-              return Problem("Entity set 'DIGITALBOOKSContext.Purchases'  is null.");
-          }
-            _context.Purchases.Add(purchase);
-            await _context.SaveChangesAsync();
+            if (_context.Purchases == null)
+            {
+                return Problem("Entity set 'DigitalBooksContext.Purchases'  is null.");
+            }
 
-            return CreatedAtAction("GetPurchase", new { id = purchase.PurchaseId }, purchase);
+
+
+            var count = _context.Purchases.Where(x => x.EmailId == purchase.EmailId && x.BookId == purchase.BookId).Count();
+            if (count == 0)
+            {
+                bool result = purchase.callPaymentAuzreFunPost();
+
+
+
+                if (result)
+                    return Ok(purchase);
+                else
+                    return BadRequest("Something went wrong");
+            }
+            else
+            {
+                return Problem("Purchase Already Exists");
+            }
         }
 
         // DELETE: api/Purchases/5

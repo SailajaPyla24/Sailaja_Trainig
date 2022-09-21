@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorService", "AuthorServ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReaderService", "ReaderService\ReaderService.csproj", "{53C19911-98B5-4FEC-953B-0D64529A9857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "AuthServer\AuthServer.csproj", "{3A4F59D7-84A0-461C-9A8D-CF311F56CD11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer", "AuthServer\AuthServer.csproj", "{3A4F59D7-84A0-461C-9A8D-CF311F56CD11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentFunction", "PaymentFunction\PaymentFunction.csproj", "{85879F1B-765B-464A-A3A7-75D053EF52E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3A4F59D7-84A0-461C-9A8D-CF311F56CD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A4F59D7-84A0-461C-9A8D-CF311F56CD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A4F59D7-84A0-461C-9A8D-CF311F56CD11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85879F1B-765B-464A-A3A7-75D053EF52E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85879F1B-765B-464A-A3A7-75D053EF52E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85879F1B-765B-464A-A3A7-75D053EF52E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85879F1B-765B-464A-A3A7-75D053EF52E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
