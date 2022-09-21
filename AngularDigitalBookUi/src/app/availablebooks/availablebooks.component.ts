@@ -39,18 +39,24 @@ export class AvailablebooksComponent implements OnInit {
     // this.book.active=false;
     this.bookServiceComponent.deactivatebook(id).subscribe(
       response =>{
-        this.bookServiceComponent.getAllBooks();
-      }
+        this.bookServiceComponent.getAllBooks().subscribe(res => {
+this.books = res;
+
+
+
+       })
+
+
+
+     }
     );
-   window.location.reload();
-    }
-    
+	}
   update(id:number,content:string)
   {
     this.bookServiceComponent.updatebook(id,content).subscribe(
       response =>{
         this.bookServiceComponent.getAllBooks();
-        alert('Book content Updated');
+        //alert('Book content Updated');
       }
     );
   }

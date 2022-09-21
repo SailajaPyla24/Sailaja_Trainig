@@ -59,16 +59,12 @@ export class LoginComponent implements OnInit {
         this.response = response;
 
         if (response.isAuthenticated == true) {
-          alert('Login Successful');
+         // alert('Login Successful');
           localStorage.setItem("Token", response.token);
           localStorage.setItem('UserTable', JSON.stringify(this.response.userTable));
-          console.log(this.response);
           let values = JSON.parse(localStorage.getItem("UserTable") || '');
-          console.log(values);
           this.appComponent.emailId=values.emailId;
-          console.log(this.appComponent.emailId);
           this.appComponent.userName=values.userName;
-          console.log(this.appComponent.emailId);
          this.appComponent.Islogoutshow=true;
         }
         else {

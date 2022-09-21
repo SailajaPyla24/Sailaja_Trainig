@@ -1,21 +1,21 @@
 myTable {
     margin-left: auto;
     margin-right: auto;
-    border: solid 1px #DDEEEE;
+    border: solid 1px #bfcbf3;
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
     }
     .myTable thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
+    background-color: #bfcbf3;
+    border: solid 1px #bfcbf3;
+    color: #1c0e5a;
     padding: 10px;
     text-align: left;
     text-shadow: 1px 1px 1px #fff;
     }
     .myTable tbody td {
-    border: solid 1px #DDEEEE;
+    border: solid 1px #bfcbf3;
     color: #333;
     padding: 10px;
     text-shadow: 1px 1px 1px #fff;
@@ -24,3 +24,4 @@ myTable {
     border-top: none;
     border-bottom: none;
     }
+    

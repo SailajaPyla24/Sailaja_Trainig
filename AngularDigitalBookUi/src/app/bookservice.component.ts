@@ -99,7 +99,6 @@ return this.http.post<UserModel>(this.userUrl,user);
 
 //Book History
 GetBookHistory(emailId :string):Observable<any>{
-  debugger;
     return this.http.get<any>(this.historyURL +"/GetPurchasedBookHistory?emailId="+emailId);
 }
   getBookInfo(bookId:number):Observable<bookModel>{

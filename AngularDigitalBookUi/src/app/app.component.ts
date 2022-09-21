@@ -16,6 +16,7 @@ export class AppComponent {
  IsAuthormoduleshow=false;
  IsReadermoduleshow=false;
  Islogoutshow=false;
+
 constructor(private router:Router){}
 
 
@@ -29,8 +30,6 @@ constructor(private router:Router){}
   this.Islogoutshow=false;
   this.IsReadermoduleshow=false;
   this.IsAuthormoduleshow=false;
-    this.router.navigate(['/Login']).then(() => {
-      window.location.reload();
-    });          
+    this.router.navigate(['/Login']);          
   }
 }

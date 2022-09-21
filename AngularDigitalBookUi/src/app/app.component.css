@@ -5,7 +5,7 @@
   
   .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #04041b;
     text-align: center;
     padding: 14px 16px;
     text-decoration: nones;
@@ -14,19 +14,22 @@
   }
   
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(148, 163, 247);
     color:rgba(241, 226, 226, 0);
   }
   
   .topnav a.active {
-    background-color: #cdc7f1;
+    background-color: #adaef5;
     color: white;
   }
 
   .toolbar {
     /* Background pattern from Toptal Subtle Patterns */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkCPVkZE_S8MzvjtPSmI-fYZjsOClMih7mKQ&usqp=CAU");
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/49/50/digital-book-logo-technology-icon-design-vector-35574950.jpg");
     background-size: cover;
     height: 700px;
     width: 100%;
+}
+.navheader{
+  text-align: center;
 }
